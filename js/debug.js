@@ -4,7 +4,7 @@
 // オフにするには DEBUG_ENABLED を false にする
 // =====================================================
 
-const DEBUG_ENABLED = true;
+const DEBUG_ENABLED = false;
 
 // デバッグメニューのDOM要素を生成して画面に追加する
 function initDebugMenu() {
