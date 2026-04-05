@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPG</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- タイトル画面 -->
+    <div id="screen-title" class="screen"></div>
+
+    <!-- メインメニュー画面 -->
+    <div id="screen-menu" class="screen hidden">
+      <div id="menu-layout">
+        <!-- 左カラム：ステータス常時表示 -->
+        <div id="left-panel">
+          <div id="status-bar"></div>
+        </div>
+        <!-- 右カラム：タブ -->
+        <div id="right-panel">
+          <div id="tab-nav">
+            <button class="tab-btn active" data-tab="adventure" onclick="switchTab('adventure')">冒険</button>
+            <button class="tab-btn" data-tab="skill"     onclick="switchTab('skill')">スキル</button>
+            <button class="tab-btn" data-tab="job"       onclick="switchTab('job')">ジョブ</button>
+            <button class="tab-btn" data-tab="equipment" onclick="switchTab('equipment')">装備</button>
+            <button class="tab-btn" data-tab="craft"     onclick="switchTab('craft')">クラフト</button>
+            <button class="tab-btn" data-tab="shop"      onclick="switchTab('shop')">ショップ</button>
+            <button class="tab-btn" data-tab="item"      onclick="switchTab('item')">アイテム</button>
+            <button class="tab-btn" data-tab="config"    onclick="switchTab('config')">設定</button>
+          </div>
+          <div id="tab-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 戦闘画面 -->
+    <div id="screen-battle" class="screen hidden"></div>
+
+  </div>
+
+  <div id="dialog-overlay" class="hidden"></div>
+  <div id="toast"></div>
+
+  <script src="js/state.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/job.js"></script>
+  <script src="js/skill.js"></script>
+  <script src="js/equipment.js"></script>
+  <script src="js/item.js"></script>
+  <script src="js/enemy.js"></script>
+  <script src="js/stage.js"></script>
+  <script src="js/battle.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/ui_battle.js"></script>
+  <script src="js/ui_training.js"></script>
+  <script src="js/ui_item.js"></script>
+  <script src="js/save.js"></script>
+  <script src="js/debug.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
